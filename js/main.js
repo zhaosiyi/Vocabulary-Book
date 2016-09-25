@@ -54,4 +54,10 @@ $(document).ready(function(){
         render();
     });
 
+    $('#return-top').click(function(){
+        alert('a');
+        $('body,html').animate({scrollTop:0},1000);  
+        return false;  
+    });
+
 });
