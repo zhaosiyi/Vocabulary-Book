@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Vocabulary Book</title>
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="./css/master.css">
+    <script src="./js/jquery-3.0.0.min.js"></script>
+    <script src="./js/fts_fuzzy_match.js"></script>
+    <script async src="./js/main.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="grey lighten-5">
+<header class="blue white-text z-depth-1 unselectable">
+    <span id="title">Vocabulary Book</span>
+    <span id="search-box" class="valign-wrapper">
+        <span><i id="search-icon" class="material-icons small">search</i><input id="search" type="text"></span>
+        <span id="fuzzy-box"><input type="checkbox" id="fuzzy-match"><label class="white-text" for="fuzzy-match"><span style="position:relative;top:-2px;">模糊匹配</span></label></span>
+    </span>
+</header>
+<main>
+<div id="book-list">
+<ul>
+    <li><a>Book 1</a></li>
+    <li><a>Book 2</a></li>
+    <li><a>Book 3</a></li>
+</ul>
+</div>
+<div id="book-content">
+<ul>
+<li>
+    <div class="word">
+        <span>have ... in common</span>
+        <button><i class="small material-icons">volume_up</i></button>
+    </div>
+    <div class="exp">有相同的特点</div>
+</li>
+<li>
+    <div class="word">
+        <span>linguist</span>
+        <button><i class="small material-icons">volume_up</i></button>
+    </div>
+    <div class="exp">语言学家</div>
+</li>
+<li>
+    <div class="word">
+        <span>make a difference</span>
+        <button><i class="small material-icons">volume_up</i></button>
+    </div>
+    <div class="exp">有影响；使不同</div>
+</li>
+
+</ul>
+</div>
+</main>
+<script src="./js/materialize.min.js"></script>
+<data id="data" class="hide">[{"name":"have ... in common","exp":"有相同的特点"},{"name":"linguist","exp":"语言学家"},{"name":"make a difference","exp":"有影响；使不同"}]</data>
+</body>
+</html>
