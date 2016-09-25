@@ -55,8 +55,7 @@ $(document).ready(function(){
     });
 
     $('#return-top').click(function(){
-        alert('a');
-        $('body,html').animate({scrollTop:0},1000);  
+        $('body,html').animate({scrollTop:0},200);  
         return false;  
     });
 
