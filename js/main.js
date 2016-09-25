@@ -1,4 +1,4 @@
-var word;
+var word= [];
 
 function render(){
     $('#book-list a').addClass('blue-text unselectable waves-effect waves-orange').click(function(event){
@@ -13,10 +13,8 @@ function render(){
 
 $(document).ready(function(){
     render();
-    word= JSON.parse($('#data').text()).sort(function(a, b){
-        return a.name<b.name;
-    });
-    console.log(word);
+    word= JSON.parse($('#data').text());
+    console.dir(word);
     $('#search').on('keyup',function(event){
         var key= $('#search').val();
         var result= [];
