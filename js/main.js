@@ -13,8 +13,10 @@ function render(){
 
 $(document).ready(function(){
     render();
-    word= JSON.parse($('#data').text());
-    //console.log(word);
+    word= JSON.parse($('#data').text()).sort(function(a, b){
+        return a.name<b.name;
+    });
+    console.log(word);
     $('#search').on('keyup',function(event){
         var key= $('#search').val();
         var result= [];

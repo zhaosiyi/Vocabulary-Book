@@ -41,7 +41,7 @@ html{
 }  
 
 body{
-    position: fixed;
+    position: static;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -132,17 +132,16 @@ header>span{
 main{
     position: relative;
     width: 100%;
-    height: calc(100% - 48px);
 }
 
 #main{
-    height: 100%;
+    
 }
 
 #book-list{
     position: absolute;
     width: 96px;
-    top: 0;
+    top: 24px;
     height: 100%;
     margin: 0;
 }
