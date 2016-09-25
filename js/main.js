@@ -17,10 +17,10 @@ function read_event(){
         var btn= $(this).find('button');
         var name= $(this).find('span').text();
         btn.click(function(){
-            console.log(name);
-            console.log(btn);
-            $('#read').attr('src', 'http://dict.youdao.com/dictvoice?audio='+name);
-            console.log($('#read'));
+            //console.log(name);
+            //console.log(btn);
+            $('#read').attr('src', 'http://dict.youdao.com/dictvoice?audio='+name)[0].play();
+            //console.log($('#read'));
         });
     });
 }
