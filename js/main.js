@@ -9,12 +9,26 @@ function render(){
     });
 
     $('.word>span').addClass('blue-text normal-cursor');
+    read_event();
+}
+
+function read_event(){
+    $('#book-content>ul>li').each(function(){
+        var btn= $(this).find('button');
+        var name= $(this).find('span').text();
+        btn.click(function(){
+            console.log(name);
+            console.log(btn);
+            $('#read').attr('src', 'http://dict.youdao.com/dictvoice?audio='+name);
+            console.log($('#read'));
+        });
+    });
 }
 
 $(document).ready(function(){
     render();
     word= JSON.parse($('#data').text());
-    console.dir(word);
+    //console.dir(word);
     $('#search').on('keyup',function(event){
         var key= $('#search').val();
         var result= [];
@@ -56,6 +70,7 @@ $(document).ready(function(){
             $('#book-content>ul').html(content);
         }
         render();
+
     });
 
     $('#return-top').click(function(){
