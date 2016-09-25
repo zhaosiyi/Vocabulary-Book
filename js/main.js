@@ -30,9 +30,15 @@ $(document).ready(function(){
                     result.push(now);
                 }
             }
-            result.sort(function(a, b){
-                return a.score<b.score;
-            });        
+            for(var i=0; i<result.length; ++i){
+                for(var j=i+1; j<result.length; ++j){
+                    if(result[i].score<result[j].score){
+                        var t= result[i];
+                        result[i]= result[j];
+                        result[j]=t;
+                    }
+                }
+            }       
         }
         else{
             result= word;
